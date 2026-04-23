@@ -1,0 +1,109 @@
+/* --- Global Container Fix --- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Header Responsive --- */
+@media (max-width: 768px) {
+  /* હેડરને મોબાઈલમાં નાનું કરવું */
+  header {
+    padding: 10px !important;
+  }
+  
+  /* મોબાઈલમાં મેનુ બટન બતાવવું અને લિંક્સ છુપાવવી */
+  nav div {
+    display: none !important; /* ડેસ્કટોપ લિંક્સ છુપાવો */
+  }
+
+  .auth-buttons {
+    display: none !important;
+  }
+}
+
+/* --- Home Hero Section Responsive --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px !important; /* મોટું ટાઇટલ મોબાઈલમાં નાનું */
+  }
+
+  /* સર્ચ બોક્સને ઉભું (Vertical) કરવું */
+  div[style*="searchBox"] {
+    flex-direction: column !important;
+    padding: 15px !important;
+    gap: 10px !important;
+  }
+
+  div[style*="inputGroup"] {
+    width: 100% !important;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  div[style*="divider"] {
+    display: none; /* લીટી કાઢી નાખવી */
+  }
+
+  button[style*="searchBtn"] {
+    width: 100% !important;
+  }
+}
+
+/* --- Property Grid Responsive --- */
+@media (max-width: 1024px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important; /* ટેબ્લેટમાં 2 કાર્ડ */
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: repeat(1, 1fr) !important; /* મોબાઈલમાં 1 કાર્ડ */
+    gap: 20px !important;
+  }
+  
+  .container {
+    padding: 0 15px !important;
+  }
+}
+
+/* --- Footer Responsive --- */
+@media (max-width: 768px) {
+  footer div[style*="mainGrid"] {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 30px !important;
+  }
+
+  footer div[style*="brandSection"] {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer div[style*="linksSection"] {
+    justify-content: center;
+    gap: 20px !important;
+  }
+}
+/* મોટી સ્ક્રીન (Laptop/Desktop) માટે */
+@media (min-width: 769px) {
+  .show-mobile {
+    display: none !important; /* લેપટોપમાં Hamburger બટન છુપાવશે */
+  }
+  .hide-mobile {
+    display: flex !important; /* લેપટોપમાં મેનુ લિંક્સ બતાવશે */
+  }
+}
+
+/* નાની સ્ક્રીન (Mobile/Tablet) માટે */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important; /* મોબાઈલમાં ડેસ્કટોપ લિંક્સ છુપાવશે */
+  }
+  .show-mobile {
+    display: block !important; /* મોબાઈલમાં Hamburger બટન બતાવશે */
+  }
+}

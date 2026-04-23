@@ -1,0 +1,205 @@
+:root {
+  --primary-bg: #0a0e27;
+  --secondary-bg: #151a35;
+  --card-bg: #1a1f3a;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --border-color: #1f2937;
+  --hover-bg: #1e293b;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Responsive Grid System */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-cols-1 { grid-template-columns: 1fr; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+  .grid-cols-4 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile (768px) */
+@media (max-width: 768px) {
+  .grid-cols-4, .grid-cols-3, .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  .container { padding: 0 15px; }
+  .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  color: white;
+}
+
+/* Form Controls */
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+/* Typography */
+h1 { font-size: clamp(28px, 5vw, 48px); }
+h2 { font-size: clamp(24px, 4vw, 36px); }
+/* --- Global Responsive Fixes (Add to index.css or App.css) --- */
+
+/* 1. Container & Main Layout */
+@media (max-width: 1024px) {
+    main {
+        padding: 30px 20px !important;
+    }
+}
+
+/* 2. Admin Dashboard & Inquiry Grids */
+@media (max-width: 768px) {
+    /* Stats Grid: Make it 1 column on mobile */
+    div[style*="statsGrid"], 
+    div[style*="inquiryGrid"],
+    div[style*="contentGrid"] {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    /* Adjust Admin Page Title */
+    h1[style*="pageTitle"] {
+        font-size: 22px !important;
+    }
+
+    /* Adjust Header for Admin */
+    header[style*="header"] {
+        padding: 0 15px !important;
+        height: auto !important;
+        padding: 10px 15px !important;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav[style*="nav"] {
+        order: 3; /* Nav links move to bottom on mobile */
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Modal Adjustments */
+    div[style*="modalContent"] {
+        width: 95% !important;
+        padding: 20px !important;
+    }
+}
+
+/* 3. Contact Us Page Specific */
+@media (max-width: 768px) {
+    div[style*="contentWrapper"] {
+        padding: 0 10px;
+    }
+
+    div[style*="grid"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    h1[style*="title"] {
+        font-size: 30px !important;
+    }
+
+    div[style*="formCard"] {
+        padding: 25px !important;
+    }
+
+    div[style*="infoCard"] {
+        padding: 15px !important;
+    }
+}
+
+/* 4. Footer Responsive */
+@media (max-width: 640px) {
+    footer div[style*="footerInner"] {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* 5. Utility for Admin Cards */
+@media (max-width: 480px) {
+    div[style*="inquiryCard"] {
+        padding: 15px !important;
+    }
+    
+    div[style*="item"] {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+/* Add this to your index.css or App.css */
+@media (max-width: 991px) {
+  .hide-mobile { display: none !important; }
+  .show-mobile { display: block !important; }
+}
+
+@media (min-width: 992px) {
+  .show-mobile { display: none !important; }
+}
+    div[style*="btnGroup"] {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
