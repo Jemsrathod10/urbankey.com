@@ -16,7 +16,7 @@ const PropertyCard = ({ property, onFavorite, isFavorite, onCompare, isComparing
   // અત્યારે મેં એવું લોજિક મૂક્યું છે કે જે સરળતાથી બદલી શકાય.
   const BASE_URL = window.location.hostname === "localhost" 
     ? "https://urbankey-com.onrender.com" 
-    : `http://${window.location.hostname}:5000`; 
+    : `https://urbankey-com.onrender.com`; 
 
   // જો તમે પ્રોડક્શન (Live Domain) પર હોવ, તો સીધું જ સર્વરનું URL લખી શકાય:
   // const BASE_URL = "https://your-backend-api.com";

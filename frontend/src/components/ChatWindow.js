@@ -6,7 +6,7 @@ import API from '../utils/api';
 
 const SOCKET_URL = window.location.hostname === "localhost" 
     ? "https://urbankey-com.onrender.com" 
-    : `http://${window.location.hostname}:5000`;
+    : `https://urbankey-com.onrender.com`;
 
 const socket = io(SOCKET_URL, {
     transports: ["websocket", "polling"],
