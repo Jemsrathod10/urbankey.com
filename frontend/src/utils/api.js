@@ -1,16 +1,7 @@
 import axios from 'axios';
 
-const getBaseURL = () => {
-  const hostname = window.location.hostname;
-  if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    return 'http://127.0.0.1:5000/api';
-  } else {
-    return `http://${hostname}:5000/api`;
-  }
-};
-
 const API = axios.create({
-  baseURL: getBaseURL()
+  baseURL: 'https://urbankey-com.onrender.com/api'
 });
 
 API.interceptors.request.use((config) => {

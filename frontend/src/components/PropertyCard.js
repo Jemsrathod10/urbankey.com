@@ -7,19 +7,9 @@ const PropertyCard = ({ property, onFavorite, isFavorite, onCompare, isComparing
 
   if (!property || !property._id) return null;
 
-  // --- ADDED: Robust Login Check ---
-  // This ensures that even if the parent fails to pass isLoggedIn, 
-  // the card checks localStorage directly so the "Login to favorite" popup doesn't show for logged-in users.
   const authStatus = isLoggedIn !== undefined ? isLoggedIn : !!localStorage.getItem('token');
 
-  // જો તમે ngrok વાપરો તો અહીં તેની લિંક મૂકવી. 
-  // અત્યારે મેં એવું લોજિક મૂક્યું છે કે જે સરળતાથી બદલી શકાય.
-  const BASE_URL = window.location.hostname === "localhost" 
-    ? "https://urbankey-com.onrender.com" 
-    : `https://urbankey-com.onrender.com`; 
-
-  // જો તમે પ્રોડક્શન (Live Domain) પર હોવ, તો સીધું જ સર્વરનું URL લખી શકાય:
-  // const BASE_URL = "https://your-backend-api.com";
+  const BASE_URL = "https://urbankey-com.onrender.com";
 
   const imageUrl =
     property.images && property.images.length > 0

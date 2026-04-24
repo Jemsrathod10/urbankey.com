@@ -29,12 +29,7 @@ const PropertyDetails = () => {
 
   const brochureRef = useRef();
 
-  // Dynamic IP Logic
-  const getBaseUrl = () => {
-    const hostname = window.location.hostname;
-    return `http://${hostname}:5000`;
-  };
-  const BASE_URL = getBaseUrl();
+  const BASE_URL = "https://urbankey-com.onrender.com";
 
   useEffect(() => {
     if (id) {
@@ -242,7 +237,6 @@ const PropertyDetails = () => {
       pdf.setTextColor(200, 200, 200);
       pdf.text("Discover Your Dream Space with Excellence", pageWidth / 2, 52, { align: 'center' });
 
-      // FIX: PDF Image with Dynamic IP Support
       const mainImgElement = document.getElementById('main-property-image');
       if (mainImgElement) {
         try {
@@ -688,6 +682,7 @@ const styles = {
   favBtn: { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '14px', borderRadius: '14px', backgroundColor: 'transparent', border: '1px solid #fff', color: '#fff', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s' },
   securityNote: { marginTop: '15px', display: 'flex', alignItems: 'center', gap: '8px', color: '#10b981', fontSize: '11px', justifyContent: 'center' },
   safetyCard: { padding: '25px', backgroundColor: 'rgba(15, 23, 42, 0.5)', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)' },
+  sidebarEmi: {},
   reviewForm: { marginBottom: '30px' },
   reviewInput: { width: '100%', padding: '12px 15px', borderRadius: '12px', backgroundColor: '#1e293b', border: '1px solid #334155', color: '#fff', marginBottom: '15px' },
   submitReviewBtn: { padding: '12px 24px', borderRadius: '12px', backgroundColor: '#3b82f6', color: '#fff', border: 'none', fontWeight: 'bold', cursor: 'pointer' },

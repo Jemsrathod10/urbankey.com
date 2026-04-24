@@ -4,9 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import { Send, X, Image as ImageIcon, Loader, CheckCheck, Phone, Video, Search } from 'lucide-react'; 
 import API from '../utils/api';
 
-const SOCKET_URL = window.location.hostname === "localhost" 
-    ? "https://urbankey-com.onrender.com" 
-    : `https://urbankey-com.onrender.com`;
+const SOCKET_URL = "https://urbankey-com.onrender.com";
 
 const socket = io(SOCKET_URL, {
     transports: ["websocket", "polling"],
