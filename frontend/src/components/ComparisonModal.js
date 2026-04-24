@@ -41,7 +41,7 @@ const ComparisonModal = ({ isOpen, onClose, compareList }) => {
                       <th key={item._id} style={styles.propCol}>
                         <div style={styles.imageCard}>
                           <img 
-                            src={`http://localhost:5000/uploads/${item.images[0]}`} 
+                            src={`https://urbankey-backend.onrender.com/uploads/${item.images[0]}`} 
                             alt="" 
                             style={styles.image} 
                           />
