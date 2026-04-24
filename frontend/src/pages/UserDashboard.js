@@ -122,7 +122,7 @@ const UserDashboard = () => {
             {myProperties.length > 0 ? myProperties.slice(0, 3).map((p) => (
               <div key={p._id} className="glass-card" style={styles.propertyCard}>
                 <div style={styles.imageWrapper}>
-                  <img src={p.images[0] ? `https://urbankey-backend.onrender.com/uploads/${p.images[0]}` : 'https://via.placeholder.com/400x250'} alt={p.title} style={styles.cardImg} />
+                  <img src={p.images[0] ? `https://urbankey-com.onrender.com/uploads/${p.images[0]}` : 'https://via.placeholder.com/400x250'} alt={p.title} style={styles.cardImg} />
                   <div style={{...styles.statusBadge, backgroundColor: p.status === 'approved' ? 'rgba(16, 185, 129, 0.9)' : 'rgba(245, 158, 11, 0.9)'}}>{p.status}</div>
                 </div>
                 <div style={styles.cardContent}>

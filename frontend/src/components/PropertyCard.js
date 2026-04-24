@@ -15,7 +15,7 @@ const PropertyCard = ({ property, onFavorite, isFavorite, onCompare, isComparing
   // જો તમે ngrok વાપરો તો અહીં તેની લિંક મૂકવી. 
   // અત્યારે મેં એવું લોજિક મૂક્યું છે કે જે સરળતાથી બદલી શકાય.
   const BASE_URL = window.location.hostname === "localhost" 
-    ? "https://urbankey-backend.onrender.com" 
+    ? "https://urbankey-com.onrender.com" 
     : `http://${window.location.hostname}:5000`; 
 
   // જો તમે પ્રોડક્શન (Live Domain) પર હોવ, તો સીધું જ સર્વરનું URL લખી શકાય:

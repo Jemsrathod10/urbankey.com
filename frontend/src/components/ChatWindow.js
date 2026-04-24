@@ -5,7 +5,7 @@ import { Send, X, Image as ImageIcon, Loader, CheckCheck, Phone, Video, Search }
 import API from '../utils/api';
 
 const SOCKET_URL = window.location.hostname === "localhost" 
-    ? "https://urbankey-backend.onrender.com" 
+    ? "https://urbankey-com.onrender.com" 
     : `http://${window.location.hostname}:5000`;
 
 const socket = io(SOCKET_URL, {

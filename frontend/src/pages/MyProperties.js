@@ -123,7 +123,7 @@ const MyProperties = () => {
           <div style={styles.grid}>
             {properties.map(property => {
               const imageUrl = property.images && property.images.length > 0 
-                ? `https://urbankey-backend.onrender.com/uploads/${property.images[0]}` 
+                ? `https://urbankey-com.onrender.com/uploads/${property.images[0]}` 
                 : 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400';
 
               return (

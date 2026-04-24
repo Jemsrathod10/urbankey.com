@@ -127,7 +127,7 @@ const Favorites = () => {
           <div style={styles.compareThumbnails}>
             {compareList.map(item => (
               <div key={item._id} style={styles.thumbWrapper}>
-                <img src={`https://urbankey-backend.onrender.com/uploads/${item.images[0]}`} alt="" style={styles.miniThumb} />
+                <img src={`https://urbankey-com.onrender.com/uploads/${item.images[0]}`} alt="" style={styles.miniThumb} />
                 <button onClick={() => toggleCompare(item)} style={styles.removeThumb}><X size={12} /></button>
               </div>
             ))}
